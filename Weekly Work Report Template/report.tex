@@ -1,0 +1,100 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{outline} \usepackage{pmgraph} \usepackage[normalem]{ulem}
+\usepackage{graphicx} \usepackage{verbatim}
+% \usepackage{minted} % need `-shell-escape' argument for local compile
+\usepackage{ctex}
+\usepackage{listings}
+\title{
+    \vspace*{1in}
+    \includegraphics[width=2.75in]{figures/zhenglab-logo} \\
+    \vspace*{1.2in}
+    \textbf{\huge Weekly Work Report}
+    \vspace{0.2in}
+}
+
+\author{Name \\
+    \vspace*{0.5in} \\
+    \textbf{NER \& RE} \\
+    \vspace*{1in}
+}
+
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+\setcounter{page}{0}
+\thispagestyle{empty}
+\newpage
+
+
+\section{工作进展}
+
+1、瑞金瑞金医院基于命名实体识别的关系抽取代码，两份代码都跑通了，其中涉及的都是一些细节的问题。
+
+2、命名实体识别，没有正确的使用所里的数据
+
+\section{问题}
+
+数据部分的格式问题，因为其中主要是集成的包，暂时没有理解数据的输入格式问题
+
+
+\section{RE}
+
+模型输入包括两个实体的句子，输出句子中两个实体的类别，即对句子进行多分类。其中两个实体的关系类别一共有11类，包括赛题中的10类实体关系（正样本）和None关系（负样本）。
+
+队伍二的代码比较简单，需要注意的问题是：个别语句因为版本变动，一些参数名称发生了变化。
+
+队伍一的代码整体比较复杂，训练时间也更长一些，其他的语句问题也和队伍二一样，发生了一些变化。
+
+
+%\section{Progress in this week}
+%
+%List what you have done in this week in detail.
+%
+%For example, maybe you performed some experiments this week. The following are the steps you took:
+%
+%\begin{description}
+%\item [Step 1]
+%Got up to welcome a new day.
+%\item[Step 2]
+%Opened your computer to start a new day's work.
+%\item[Step 3]
+%Got stuck with a very hard problem, like $e^{i \pi} + 1 = 0$.
+%\item[Step 4]
+%You searched online and realized some useful information like Figure~\ref{fig:google} shows. You asked other people for help and got the things done luckily.
+%\end{description}
+
+
+
+% If you don't cite any references, please comment the following two lines
+%\bibliographystyle{ieee}
+%\bibliography{ref.bib}
+
+\newpage
+\appendix
+\section{队伍2}
+\begin{lstlisting}[language=python]
+	# 利用候选 relation 所在的句子训练字符级别的字向量
+	word2idx = {'<pad>': 0, '<unk>': 1}
+	word2idx, index_to_key, w2v_embeddings = train_word_embeddings(
+	entity_pairs=chain(train_entity_pairs, test_entity_pairs),
+	word2idx=word2idx,
+	vector_size=100,
+	epochs=1
+	)
+
+\end{lstlisting}
+
+
+\end{document}

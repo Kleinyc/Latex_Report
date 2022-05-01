@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}研究背景}{1}{section.1}%
+\contentsline {section}{\numberline {2}数据准备}{1}{section.2}%
+\contentsline {section}{\numberline {3}贷款流程自动化模型建立流程}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}导入数据并检查NA值}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}计算DTI}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}创建贷款决定状态变量}{2}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}选择预测所需的字段}{2}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}将分类变量编码为因子}{2}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}拆分集合}{2}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}数据处理}{2}{subsection.3.7}%
+\contentsline {section}{\numberline {4}结果}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}预测结果}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}使用测试集的实际观察结果和预测结果绘制图}{3}{subsection.4.2}%
+\contentsline {section}{\numberline {A}代码}{5}{appendix.1.A}%
+\contentsfinish 
